@@ -196,10 +196,10 @@ section {
   text-align: center;
 }
 .skills-grid {
-  display: flex; /* Changed from Grid to Flex */
-  flex-wrap: wrap; /* Allows items to wrap naturally */
-  justify-content: center; /* Centers them */
-  gap: 15px; /* Space between items */
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: center; 
+  gap: 15px; 
   margin-top: 2rem;
 }
 
@@ -207,7 +207,7 @@ section {
   font-size: 1.1rem;
   padding: 0.8rem 1.5rem;
   background: var(--bg-color);
-  border-radius: 50px; /* Makes them pill-shaped */
+  border-radius: 50px; 
   border: 1px solid var(--main-color);
   transition: 0.3s;
   cursor: default;
@@ -229,13 +229,12 @@ section {
 
 .project-card {
   background: var(--second-bg-color);
-  padding: 2rem 1.5rem; /* Slightly reduced top/bottom padding */
+  padding: 2rem 1.5rem; 
   border-radius: 2rem;
   text-align: center;
   border: 1px solid transparent;
   transition: 0.5s ease;
 
-  /* NEW: Flexbox to ensure equal height & push buttons to bottom */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -254,7 +253,7 @@ section {
 
 .project-card h3 {
   font-size: 2rem;
-  margin-bottom: 0.5rem; /* Reduced slightly */
+  margin-bottom: 0.5rem; 
 }
 
 .tech-stack {
@@ -268,25 +267,24 @@ section {
   margin-bottom: 2rem;
   font-size: 1rem;
   line-height: 1.5;
-  flex-grow: 1; /* Pushes the buttons down to fill space */
+  flex-grow: 1; 
 }
 
-/* NEW: Container for buttons to keep them neat */
 .card-buttons {
   display: flex;
   justify-content: center;
   gap: 10px;
   flex-wrap: wrap;
-  margin-top: auto; /* Ensures it sits at the bottom */
+  margin-top: auto; 
 }
 
 .btn-small {
-  padding: 0.6rem 1.2rem; /* Adjusted for better fit */
+  padding: 0.6rem 1.2rem; 
   background: var(--main-color);
   color: var(--second-bg-color);
   border-radius: 2rem;
   font-weight: 600;
-  font-size: 0.9rem; /* Slightly smaller text for fit */
+  font-size: 0.9rem; 
   white-space: nowrap; /* Prevents text splitting */
   transition: 0.3s;
 }
@@ -321,4 +319,50 @@ section {
 }
 .contact-form textarea {
   resize: none;
+}
+
+/* Footer Styling */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: var(--second-bg-color); 
+    margin-top: auto; /* Pushes footer to bottom if page is short */
+}
+
+.footer-text p {
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.footer-iconTop a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.8rem;
+    background: var(--main-color);
+    border-radius: 0.6rem;
+    transition: 0.5s ease;
+}
+
+.footer-iconTop a:hover {
+    box-shadow: 0 0 1rem var(--main-color); 
+    transform: translateY(-5px);
+}
+
+.footer-iconTop a i {
+    font-size: 1.2rem;
+    color: var(--second-bg-color); 
+}
+
+/* Mobile Tweak for Footer */
+@media (max-width: 768px) {
+    .footer {
+        padding: 2rem 3%;
+        flex-direction: column-reverse; 
+        gap: 1rem;
+        text-align: center;
+    }
 }
