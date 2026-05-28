@@ -6,6 +6,14 @@ hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
 });
 
+const navLinksItems = document.querySelectorAll('.nav-links a');
+
+navLinksItems.forEach(item => {
+    item.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+    });
+});
+
 /* Simple Typing Effect */
 const textElement = document.querySelector('.typing-text');
 const texts = ["Web Developer", "MCA Student", "Problem Solver"];
@@ -25,8 +33,8 @@ let letter = "";
     if (letter.length === currentText.length) {
         count++;
         index = 0;
-        setTimeout(type, 2000); // Pause at end of word
+        setTimeout(type, 2000); 
     } else {
-        setTimeout(type, 150); // Typing speed
+        setTimeout(type, 150); 
     }
 })();
